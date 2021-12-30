@@ -1,6 +1,17 @@
+body {
+    background-image: linear-gradient(to right, grey , white);
+    font-family: 'Courier New', Courier, monospace
+}
+
 .container {
     display: flex;
     flex-direction: column;
+    border: 2px solid blue;
+    height: 100%;
+    padding: 8px;
+    display: flex;
+    flex: 1;
+    align-items: center;
 }
 
 #book {
@@ -8,4 +19,16 @@
     width: 100px;
     padding: 10px;
     margin: 10px;
+}
+
+#row-1, #row-2, #row-3{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    margin: 10px;
+}
+
+.addBookForm {
+    border: 1px solid black;
 }
