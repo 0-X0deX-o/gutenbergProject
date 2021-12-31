@@ -1,0 +1,30 @@
+* {
+
+}
+
+body {
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container {
+    margin: 50px;
+    border-radius: 15px;
+    background-color: grey;
+    height: 100vh;
+}
+
+.form-header {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+p {
+    padding: 2px;
+    background-color: white;
+    width: fit-content;
+    border-radius: 5px;
+}
