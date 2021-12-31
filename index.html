@@ -11,7 +11,19 @@
     <div class="container-large" id="container-large">
         <h1 class="header">Gutenburg Project</h1>
         <p>below is a list of some free books that anyone can read...</p>
-        <div class="cols"></div>
+        <div class="cols">
+            <div id="col0" class="col" ontouchstart="this.classList.toggle('hover');"></div>
+            <div id="col1" class="col" ontouchstart="this.classList.toggle('hover');"></div>
+            <div id="col2" class="col" ontouchstart="this.classList.toggle('hover');"></div>
+            <div id="col3" class="col" ontouchstart="this.classList.toggle('hover');"></div>
+            <div id="col4" class="col" ontouchstart="this.classList.toggle('hover');"></div>
+            <div id="col5" class="col" ontouchstart="this.classList.toggle('hover');"></div>
+            <div id="col6" class="col" ontouchstart="this.classList.toggle('hover');"></div>
+            <div id="col7" class="col" ontouchstart="this.classList.toggle('hover');"></div>
+            <div id="col8" class="col" ontouchstart="this.classList.toggle('hover');"></div>
+            <div id="col9" class="col" ontouchstart="this.classList.toggle('hover');"></div>
+            <div id="col10" class="col" ontouchstart="this.classList.toggle('hover');"></div>
+            <div id="col11" class="col" ontouchstart="this.classList.toggle('hover');"></div>
         <!-- <div id="add-book" class="add-book">
                 <form action="./formSubmit.js" class="addBookForm" id="addBookForm">
                 <label for="title">Book Title:</label><br>
@@ -26,52 +38,75 @@
                 
             <!-- </form> -->
         <!-- </div> -->
+        </div>
     </div>
     <script src="./script.js"></script>
     <script type="text/javascript">
-        const libraryCardCreator = function() {
-            for (let i = 0; i < library.length; i++) {
-                let containerLarge = document.querySelector(".container-large");
-                let col = document.createElement("div");
-                col.className = "col";
-                col.ontouchstart = "this.classList.toggle('hover');"
-                containerLarge.appendChild(col);
-                let col0 = document.querySelector(".col");
-                let containerSmall = document.createElement("div");
-                containerSmall.className = "container-small";
-                containerSmall.id = library[i].title;
-                col0.appendChild(containerSmall);
-                let containerSmall0 = document.querySelector(".container-small");
-                let front = document.createElement("div");
-                front.className = "front";
-                let url = basePicUrl+picUrlSuffixes[i]
-                front.style.backgroundImage = `url(${url})`
-                containerSmall0.appendChild(front);
-                let front0 = document.querySelector(".front");
-                let inner = document.createElement("div");
-                inner.className = "inner";
-                front0.appendChild(inner);
-                let inner0 = document.querySelector(".inner");
-                let p = document.createElement("p");
-                p.innerText = library[i].title;
-                let span = document.createElement("span");
-                span.innerText = library[i].author; 
-                let back = document.createElement("div");
-                back.className = "back";
-                containerSmall0.appendChild(back);
-                let back0 = document.querySelector(".back");
-                let inner2 = document.createElement("div");
-                inner2.className = "inner";
-                inner2.id = "inner";
-                back0.appendChild(inner2);
-                let inner20 = document.querySelector("#inner");
-                let p2 = document.createElement("p");
-                p2.innerText = "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit.";
-                inner20.appendChild(p2);    
-            };
-        };    
-        libraryCardCreator();
-    </script>
+        library.forEach( i => {
+            
+        });
+        // const cardCreator = function() {
+        //         //container for the cards
+        //         let cols = document.querySelector(".cols");
+        //         for (let i = 0; i < library.length; i++) {
+                    
+        //             //first card's div
+        //             let col = document.createElement("div");
+        //             col.className = "col"+i;
+        //             col.ontouchstart = "this.classList.toggle('hover');"
+        //             cols.appendChild(col);
+                    
+        //             //container for front and back animation 
+        //             let col0 = document.querySelector(".col"+i);
+        //             let containerSmall = document.createElement("div");
+        //             containerSmall.className = "container-small"+i;
+        //             containerSmall.id = "King John";
+        //             col0.appendChild(containerSmall);
+                    
+        //             // front
+        //             let containerSmall0 = document.querySelector(".container-small"+i);
+        //             let front = document.createElement("div");
+        //             front.className = "front"+i;
+        //             let url = './icons/kingjohncover.jpg'
+        //             front.style.backgroundImage = `url(${url})`
+        //             containerSmall0.appendChild(front);
+                    
+        //             //inner addition
+        //             let front0 = document.querySelector(".front"+i);
+        //             let inner = document.createElement("div");
+        //             inner.className = "inner";
+        //             front0.appendChild(inner);
+                    
+        //             //title and author divs 
+        //             let inner0 = document.querySelector(".inner"+i);
+        //             let p = document.createElement("p");
+        //             p.innerText = "King John";
+        //             let span = document.createElement("span");
+        //             span.innerText = "William Shakespeare"; 
+        //             inner0.appendChild(p);
+        //             inner0.appendChild(span);
+                    
+        //             //back div added to the card container
+        //             let back = document.createElement("div");
+        //             back.className = "back"+i;
+        //             containerSmall0.appendChild(back);
+                    
+        //             //inner addition 
+        //             let back0 = document.querySelector(".back"+i);
+        //             let inner2 = document.createElement("div");
+        //             inner2.className = "inner"+i;
+        //             inner2.id = "inner"+i;
+        //             back0.appendChild(inner2);
+                    
+        //             // back of card description 
+        //             let inner20 = document.querySelector("#inner"+i);
+        //             let p2 = document.createElement("p");
+        //             p2.innerText = "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit.";
+        //             inner20.appendChild(p2);
+        //         };
+        //     };
+        //     cardCreator();
+        // </script>
 </body>
 </html>
 
