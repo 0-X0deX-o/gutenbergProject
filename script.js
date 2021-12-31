@@ -1,7 +1,6 @@
-let body = document.querySelector("body");
 let library = [];
 let baseUrl = 'https://www.gutenburg.org/'
-let basePicUrl = 'C:\\Users\\hrsmlab\\Documents\\Dev\\Code Wars\\Web\\gutenburg\\icons\\'
+let basePicUrl = "./icons/"
 const picUrlSuffixes = ["kingjohncover.jpg", "richardiiicover.jpg", "genryivcover.jpg", "henryivpicover.jpg", "henryvcover.jpg", "henryvipicover.jpg", "henryvipiicover.jpg", "henryvipiiicover.jpg", "henryviiiicover.jpg", "pilgrimsprogresscover.jpg", "warandpeacecover.jpg", "whitenightscover.jpg"]
 
 //create a function to dynamically create the html for the library
@@ -39,17 +38,8 @@ const addToLibrary = function(bookArray) {
     }
 }
 
-
-
-
 //add the titles to the library array
 addToLibrary([kingJohn, richardIII, henryIVPI, henryIVPII, henryV, henryVIPI, henryVIPII, henryVIPIII, henryVIII, pilrimsProgress, warAndPeace, whiteNights]);
-
-
-
-
-
-
 
 //--------------------------------------------------------------------------------------------------------------------------------------//
 
