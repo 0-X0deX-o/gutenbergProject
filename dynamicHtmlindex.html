@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Gutenburg</title>
+</head>
+<body>
+    <div class="container-large" id="container-large">
+        <h1 class="header">Gutenburg Project</h1>
+        <p>below is a list of some free books that anyone can read...</p>
+        <div class="cols">
+            <div id="col0" class="col" ontouchstart="this.classList.toggle('hover');"></div>
+            <div id="col1" class="col" ontouchstart="this.classList.toggle('hover');"></div>
+            <div id="col2" class="col" ontouchstart="this.classList.toggle('hover');"></div>
+            <div id="col3" class="col" ontouchstart="this.classList.toggle('hover');"></div>
+            <div id="col4" class="col" ontouchstart="this.classList.toggle('hover');"></div>
+            <div id="col5" class="col" ontouchstart="this.classList.toggle('hover');"></div>
+            <div id="col6" class="col" ontouchstart="this.classList.toggle('hover');"></div>
+            <div id="col7" class="col" ontouchstart="this.classList.toggle('hover');"></div>
+            <div id="col8" class="col" ontouchstart="this.classList.toggle('hover');"></div>
+            <div id="col9" class="col" ontouchstart="this.classList.toggle('hover');"></div>
+            <div id="col10" class="col" ontouchstart="this.classList.toggle('hover');"></div>
+            <div id="col11" class="col" ontouchstart="this.classList.toggle('hover');"></div>
+        <!-- <div id="add-book" class="add-book">
+                <form action="./formSubmit.js" class="addBookForm" id="addBookForm">
+                <label for="title">Book Title:</label><br>
+                <input type="text" id="inputTitle" name="inputTitle" placeholder="Title..."><br>
+                <label for="author">Book's Author:</label><br>
+                <input type="text" id="inputAuthor" name="inputAuthor" placeholder="Author..."><br>
+                <label for="Number-of-pages">Number of Pages:</label><br>
+                <input type="text" id="inputPages" name="inputPages" placeholder="Pages..."><br>
+                <label for="publication-dat">Year Published</label><br>
+                <input type="text" id="inputPubYear" name="inputPubYear" placeholder="Year Published.."><br>
+                <input type="submit"> -->
+                
+            <!-- </form> -->
+        <!-- </div> -->
+        </div>
+    </div>
+    <script src="./script.js"></script>
+    <script type="text/javascript">
+        window.onload = function() {
+            //container for the cards
+            let cols = document.querySelector(".cols");
+            for (let i = 0; i < 2; i++) {
+                    
+                //container for front and back animation 
+                let col = document.querySelector("#col"+i);
+                let container = document.createElement("div");
+                container.className = "container";
+                container.id = library[i].title;
+                col.appendChild(container);
+                    
+                // front
+                let containerqs = document.querySelector(`#${library[i].title}`);
+                let front = document.createElement("div");
+                front.className = "front";
+                front.id = "front"+i;
+                let url = basePicUrl+picUrlSuffixes[i];
+                front.style.backgroundImage = `url(${url})`
+                containerqs.appendChild(front);
+                    
+                //inner addition
+                let frontqs = document.querySelector("#front"+i);
+                let inner = document.createElement("div");
+                inner.className = "inner";
+                inner.id = "inner"+i;
+                frontqs.appendChild(inner);
+                    
+                //title and author divs 
+                let innerqs = document.querySelector("#inner"+i);
+                let p = document.createElement("p");
+                p.innerText = library[i].title;
+                innerqs.appendChild(p);
+                let span = document.createElement("span");
+                span.innerText = library[i].author; 
+                innerqs.appendChild(span);
+                    
+                //back div added to the card container
+                let back = document.createElement("div");
+                back.className = "back";
+                back.id = "back"+i;
+                containerqs.appendChild(back);
+                    
+                //inner addition 
+                let backqs = document.querySelector("#back"+i);
+                let inner2 = document.createElement("div");
+                inner2.className = "inner";
+                inner2.id = "inner2"+i;
+                backqs.appendChild(inner2);
+                    
+                // back of card description 
+                let innerqs2 = document.querySelector("#inner2"+i);
+                let p2 = document.createElement("p");
+                p2.innerText = "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit.";
+                innerqs2.appendChild(p2);
+                };
+            };           
+        // </script>
+</body>
+</html>
+
+<!-- add a header and footer -->
+
+
+<!-- I need to learn function and variable scope -->
+<!-- write a quick AJAX function to pull images for each of the books -->
+
+
+<!-- <div class="col" ontouchstart="this.classList.toggle('hover');">
+    <div class="container">
+        <div class="front" style="background-image: url(https://unsplash.it/500/500/)">
+            <div class="inner">
+                <p>Diligord</p>
+  <span>Lorem ipsum</span>
+            </div>
+        </div>
+        <div class="back">
+            <div class="inner">
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.</p>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+
+
+<!-- I need to do more studying in reference to loops and forEach methods... -->
