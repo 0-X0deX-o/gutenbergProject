@@ -1,6 +1,8 @@
 let body = document.querySelector("body");
 let library = [];
 let baseUrl = 'https://www.gutenburg.org/'
+let basePicUrl = 'C:\\Users\\hrsmlab\\Documents\\Dev\\Code Wars\\Web\\gutenburg\\icons\\'
+const picUrlSuffixes = ["kingjohncover.jpg", "richardiiicover.jpg", "genryivcover.jpg", "henryivpicover.jpg", "henryvcover.jpg", "henryvipicover.jpg", "henryvipiicover.jpg", "henryvipiiicover.jpg", "henryviiiicover.jpg", "pilgrimsprogresscover.jpg", "warandpeacecover.jpg", "whitenightscover.jpg"]
 
 //create a function to dynamically create the html for the library
 //  create a div for each title in the library
@@ -13,7 +15,6 @@ function Book(title, author, url, pages, pubDate) {
     this.pages = pages;
     this.pubDate = pubDate;
     this.daysToRead = (pages/300).toFixed(2);
-    this.picture = picture;
     this.read = false;
 }
 
@@ -30,7 +31,6 @@ const henryVIII = new Book('Henry VIII', 'William Shakespeare', '/cache/epub/113
 const pilrimsProgress = new Book('Pilgrim\'s Progress', 'John Bunyan', '/files/131/131-h/131-h.htm', 324, 1678)
 const warAndPeace = new Book('War and Peace', 'Leo Tolstoy', '/files/2600/2600-h/2600-h.htm', 1140, 1899)
 const whiteNights = new Book('White Night\'s', 'Fydor Dostoyevsky', '/files/36034/36034-h/36034-h.htm', 82, 1848)
-let page = document.getElementById("container");
 
 //create a function to add the titles to the library array
 const addToLibrary = function(bookArray) {
@@ -39,11 +39,21 @@ const addToLibrary = function(bookArray) {
     }
 }
 
-//call the function to add the cards to the container
+
+
 
 //add the titles to the library array
 addToLibrary([kingJohn, richardIII, henryIVPI, henryIVPII, henryV, henryVIPI, henryVIPII, henryVIPIII, henryVIII, pilrimsProgress, warAndPeace, whiteNights]);
-//call the DOM function from earlier to verify correct syntax
+
+
+
+
+
+
+
+//--------------------------------------------------------------------------------------------------------------------------------------//
+
+//add a description of each book to the cards
 
 //capture a github request to define parameter sytax
 //search bar fles on the main landing page

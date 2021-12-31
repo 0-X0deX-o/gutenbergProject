@@ -8,14 +8,12 @@
     <title>Gutenburg</title>
 </head>
 <body>
-    <div class="container">
+    <div class="container-large" id="container-large">
         <h1 class="header">Gutenburg Project</h1>
         <p>below is a list of some free books that anyone can read...</p>
-        <div id="row-1" class="row-1"></div>
-        <div id="row-2" class="row-2"></div>
-        <div id="row-3" class="row-3"></div>
-        <div id="add-book" class="add-book">
-            <form action="./formSubmit.js" class="addBookForm" id="addBookForm">
+        <div class="cols"></div>
+        <!-- <div id="add-book" class="add-book">
+                <form action="./formSubmit.js" class="addBookForm" id="addBookForm">
                 <label for="title">Book Title:</label><br>
                 <input type="text" id="inputTitle" name="inputTitle" placeholder="Title..."><br>
                 <label for="author">Book's Author:</label><br>
@@ -24,32 +22,52 @@
                 <input type="text" id="inputPages" name="inputPages" placeholder="Pages..."><br>
                 <label for="publication-dat">Year Published</label><br>
                 <input type="text" id="inputPubYear" name="inputPubYear" placeholder="Year Published.."><br>
-                <input type="submit">
+                <input type="submit"> -->
                 
-            </form>
-        </div>
+            <!-- </form> -->
+        <!-- </div> -->
     </div>
     <script src="./script.js"></script>
     <script type="text/javascript">
         const libraryCardCreator = function() {
             for (let i = 0; i < library.length; i++) {
-                let div = document.createElement("div");
-                div.className = library[i].title;
-                div.id = "book";
-                div.style.border = "1px solid black";
-                if (i < 4){
-                    let row1 = document.getElementById("row-1");
-                    row1.style.border = "1px solid red";
-                    row1.appendChild(div);
-                } else if (i < 8){
-                    let row2 = document.getElementById("row-2");
-                    row2.style.border = "1px solid red";
-                    row2.appendChild(div);
-                } else {
-                    let row3 = document.getElementById("row-3");
-                    row3.style.border = "1px solid red";
-                    row3.appendChild(div);
-                }
+                let containerLarge = document.querySelector(".container-large");
+                let col = document.createElement("div");
+                col.className = "col";
+                col.ontouchstart = "this.classList.toggle('hover');"
+                containerLarge.appendChild(col);
+                let col0 = document.querySelector(".col");
+                let containerSmall = document.createElement("div");
+                containerSmall.className = "container-small";
+                containerSmall.id = library[i].title;
+                col0.appendChild(containerSmall);
+                let containerSmall0 = document.querySelector(".container-small");
+                let front = document.createElement("div");
+                front.className = "front";
+                let url = basePicUrl+picUrlSuffixes[i]
+                front.style.backgroundImage = `url(${url})`
+                containerSmall0.appendChild(front);
+                let front0 = document.querySelector(".front");
+                let inner = document.createElement("div");
+                inner.className = "inner";
+                front0.appendChild(inner);
+                let inner0 = document.querySelector(".inner");
+                let p = document.createElement("p");
+                p.innerText = library[i].title;
+                let span = document.createElement("span");
+                span.innerText = library[i].author; 
+                let back = document.createElement("div");
+                back.className = "back";
+                containerSmall0.appendChild(back);
+                let back0 = document.querySelector(".back");
+                let inner2 = document.createElement("div");
+                inner2.className = "inner";
+                inner2.id = "inner";
+                back0.appendChild(inner2);
+                let inner20 = document.querySelector("#inner");
+                let p2 = document.createElement("p");
+                p2.innerText = "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit.";
+                inner20.appendChild(p2);    
             };
         };    
         libraryCardCreator();
@@ -62,3 +80,21 @@
 
 <!-- I need to learn function and variable scope -->
 <!-- write a quick AJAX function to pull images for each of the books -->
+
+
+<!-- <div class="col" ontouchstart="this.classList.toggle('hover');">
+    <div class="container">
+        <div class="front" style="background-image: url(https://unsplash.it/500/500/)">
+            <div class="inner">
+                <p>Diligord</p>
+  <span>Lorem ipsum</span>
+            </div>
+        </div>
+        <div class="back">
+            <div class="inner">
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.</p>
+            </div>
+        </div>
+    </div>
+</div> -->
+
