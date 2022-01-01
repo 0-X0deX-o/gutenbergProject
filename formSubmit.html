@@ -9,23 +9,88 @@
 </head>
 <body>
     <div class="form-container">
-        <div class="form-header">
-            <p>Enter in the New Book Information Below:</p>
-        </div>
-        <form class="form" action="./formSubmit.js">
-            <label for="title">Book Title:</label><br>
-            <input type="text" placeholder="title..."><br>
-            <label for="author">Author:</label><br>
-            <input type="text" placeholder="author..."><br>
-            <label for="url">URL for the Book:</label><br>
-            <input type="text" placeholder="url..."><br>
-            <label for="pages">Number of Pages:</label><br>
-            <input type="text" placeholder="pages..."><br>
-            <label for="pubDate">Publication Year:</label><br>
-            <input type="text" placeholder="year..."><br>
-            <input type="submit">
+        <section class="form" role="main">
+            <div class="form-header">
+                <div>Enter Book Information:</div>
+                <div class="phrase">Book Details Below</div>
+            </div>
+            <div>
+            <form id="form-add-book" class="form-add-book">
+                <div class="form-field1">
+                    <div class="form-field1a">
+                        <div class="form-field1b">
+                            <div class="form-field1c" data-ds--text-field--container="true">
+                                <input type="title" class="title" name="title" autocomplete="name" placeholder="Enter Title..." data-ds--text-field--input="true" value="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-field2">
+                    <div class="form-field2a">
+                        <div class="form-field2b">
+                            <div class="form-field2c" data-ds--text-field--container="true">
+                                <input type="author" class="author" name="author" autocomplete="name" placeholder="Enter Author..." data-ds--text-field--input="true" value="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-field1">
+                    <div class="form-field1a">
+                        <div class="form-field1b">
+                            <div class="form-field1c" data-ds--text-field--container="true">
+                                <input type="title" class="title" name="title" autocomplete="name" placeholder="Enter Title..." data-ds--text-field--input="true" value="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-field3">
+                    <div class="form-field3a">
+                        <div class="form-field3b">
+                            <div class="form-field3c" data-ds--text-field--container="true">
+                                <input type="url" class="url" name="url" autocomplete="name" placeholder="Enter Resource URL..." data-ds--text-field--input="true" value="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-field4">
+                    <div class="form-field4a">
+                        <div class="form-field4b">
+                            <div class="form-field4c" data-ds--text-field--container="true">
+                                <input type="number" min="0" max="16,384" class="title" name="title" autocomplete="name" placeholder="Enter Number of Pages..." data-ds--text-field--input="true" value="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-field5">
+                    <div class="form-field5a">
+                        <div class="form-field5b">
+                            <div class="form-field5c" data-ds--text-field--container="true">
+                                <input type="text" class="title" name="title" autocomplete="name" placeholder="Enter Publication Year..." data-ds--text-field--input="true" value="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="add-button">
+                    <button id="book-add-button" class="book-add-button" type="submit" tabindex="0";>
+                        <span class="button-span">
+                            <span>
+                                Add book
+                            </span>
+                        </span>
+                    </button>
+                </div>
+                
+                    <div>
+
+                    </div>
+                </div>
+            </form>    
+            </div>
+        </section>
 
         </form>
     </div>
 </body>
 </html>
+
+<!-- programs to automate logins -->
