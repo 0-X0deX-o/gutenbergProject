@@ -1,0 +1,8 @@
+library = []
+
+const <varName> = new Book(formTitle, formAuthor, formUrl, formPages, formPubDate);
+
+library.push(<varName>);
+
+//what are the window built in methods?
+//learn wordpress, wix, etc.

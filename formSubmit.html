@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./formSubmit.js" defer></script>
     <link rel="stylesheet" href="./form.css">
     <title>Gutenburg Form Submit</title>
 </head>
@@ -20,7 +21,7 @@
                     <div class="form-field1a">
                         <div class="form-field1b">
                             <div class="form-field1c" data-ds--text-field--container="true">
-                                <input type="title" class="form-field" name="title" autocomplete="name" placeholder="Enter Title..." data-ds--text-field--input="true" value="">
+                                <input type="title" id="title" class="form-field" name="title" autocomplete="name" placeholder="Enter Title..." data-ds--text-field--input="true" value="">
                             </div>
                         </div>
                     </div>
@@ -29,7 +30,7 @@
                     <div class="form-field1a">
                         <div class="form-field1b">
                             <div class="form-field1c" data-ds--text-field--container="true">
-                                <input type="author" class="form-field" name="author" autocomplete="name" placeholder="Enter Author..." data-ds--text-field--input="true" value="">
+                                <input type="author" id="author" class="form-field" name="author" autocomplete="name" placeholder="Enter Author..." data-ds--text-field--input="true" value="">
                             </div>
                         </div>
                     </div>
@@ -38,7 +39,7 @@
                     <div class="form-field1a">
                         <div class="form-field1b">
                             <div class="form-field1c" data-ds--text-field--container="true">
-                                <input type="title" class="form-field" name="title" autocomplete="name" placeholder="Enter Title..." data-ds--text-field--input="true" value="">
+                                <input type="text" id="url" class="form-field" name="url" autocomplete="name" placeholder="Enter Resource URL..." data-ds--text-field--input="true" value="">
                             </div>
                         </div>
                     </div>
@@ -47,7 +48,7 @@
                     <div class="form-field1a">
                         <div class="form-field1b">
                             <div class="form-field1c" data-ds--text-field--container="true">
-                                <input type="text" class="form-field" name="url" autocomplete="name" placeholder="Enter Resource URL..." data-ds--text-field--input="true" value="">
+                                <input type="number" id="numPages" min="0" max="16,384" class="form-field" name="title" autocomplete="name" placeholder="Enter Number of Pages..." data-ds--text-field--input="true" value="">
                             </div>
                         </div>
                     </div>
@@ -56,16 +57,7 @@
                     <div class="form-field1a">
                         <div class="form-field1b">
                             <div class="form-field1c" data-ds--text-field--container="true">
-                                <input type="number" min="0" max="16,384" class="form-field" name="title" autocomplete="name" placeholder="Enter Number of Pages..." data-ds--text-field--input="true" value="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="form-field1">
-                    <div class="form-field1a">
-                        <div class="form-field1b">
-                            <div class="form-field1c" data-ds--text-field--container="true">
-                                <input type="text" class="form-field" name="publication year" autocomplete="name" placeholder="Enter Publication Year..." data-ds--text-field--input="true" value="">
+                                <input type="text" id="pubYear" class="form-field" name="publication year" autocomplete="name" placeholder="Publication Year..." data-ds--text-field--input="true" value="">
                             </div>
                         </div>
                     </div>
@@ -86,7 +78,7 @@
                     </p>
                 </div>
                 <div class="add-button">
-                    <button id="book-add-button" class="book-add-button" type="submit" tabindex="0";>
+                    <button id="book-add-button" class="book-add-button" type="submit" tabindex="0">
                         <span class="button-span">
                             <span>
                                 Add book
@@ -104,3 +96,4 @@
 </html>
 
 <!-- programs to automate logins -->
+<!-- extra set of divs -->
